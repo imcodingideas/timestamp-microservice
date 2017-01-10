@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Timestamp Microservice</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>API Basejump: Timestamp microservice</h1>
+            <p>User stories</p>
+            <ul>
+                <li>I can pass a string as a parameter, and it will check to see whether that string contains either a
+                    unix timestamp or a natural language date (example: January 1, 2016)
+                </li>
+                <li>If it does, it returns both the Unix timestamp and the natural language form of that date.</li>
+                <li>If it does not contain a date or Unix timestamp, it returns null for those properties.</li>
+            </ul>
+            <h3>Example usage:</h3>
+            <p>
+                <code>https://<%= host %>/January%2010%202017</code>
+            </p>
+            <p>
+                <code>https://<%= host %>/1484006400</code>
+            </p>
+            <h3>Example output:</h3>
+            <p>
+                <code>{"unix":1484006400,"natural":"January 10, 2017"}</code>
+            </p>
+
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</body>
+</html>
